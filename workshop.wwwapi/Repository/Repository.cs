@@ -19,9 +19,9 @@ namespace workshop.wwwapi.Repository
         {
             return await _databaseContext.Doctors.ToListAsync();
         }
-        public async Task<IEnumerable<Appointment>> GetAppointments()
+        public async Task<IEnumerable<Appointment>> GetAppointmentsByDoctor(int id)
         {
-            return await _databaseContext.Appointments.ToListAsync();
+            return await _databaseContext.Appointments.Where(a => a.DoctorId==id).ToListAsync();
         }
     }
 }

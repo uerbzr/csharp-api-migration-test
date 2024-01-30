@@ -2,7 +2,7 @@
 
 namespace workshop.wwwapi.Models
 {
-    [Table("appointment")]
+    [Table("appointments")]
     public class Appointment
     {
         

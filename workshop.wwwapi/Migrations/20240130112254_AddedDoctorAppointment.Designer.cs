@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using workshop.wwwapi.Data;
@@ -11,9 +12,11 @@ using workshop.wwwapi.Data;
 namespace workshop.wwwapi.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20240130112254_AddedDoctorAppointment")]
+    partial class AddedDoctorAppointment
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,14 +38,14 @@ namespace workshop.wwwapi.Migrations
 
                     b.HasKey("PatientId", "DoctorId");
 
-                    b.ToTable("appointments");
+                    b.ToTable("appointment");
 
                     b.HasData(
                         new
                         {
                             PatientId = 1,
                             DoctorId = 1,
-                            Booking = new DateTime(2024, 1, 30, 11, 23, 54, 608, DateTimeKind.Utc).AddTicks(7435)
+                            Booking = new DateTime(2024, 1, 30, 11, 22, 54, 64, DateTimeKind.Utc).AddTicks(6048)
                         });
                 });
 
