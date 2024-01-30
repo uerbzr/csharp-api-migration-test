@@ -71,18 +71,18 @@ Create a new appsettings.json / appsettings.Development.json (see appsettings.Ex
 
 ## Install Nugets
 
-Install the following packages:
-Install-Package Microsoft.EntityFrameworkCore
-Install-Package Microsoft.EntityFrameworkCore.Tools
-Install-Package Microsoft.EntityFrameworkCore.Design
-Install-Package NpgSql.EntityFrameworkCore.PostgreSql
+- Install the following packages:
+- Install-Package Microsoft.EntityFrameworkCore
+- Install-Package Microsoft.EntityFrameworkCore.Tools
+- Install-Package Microsoft.EntityFrameworkCore.Design
+- Install-Package NpgSql.EntityFrameworkCore.PostgreSql
 
 ## Migrations
-Add-Migration FirstMigration
-Update-Database
+- `Add-Migration MIGRATION_NAME`
+- `Update-Database`
 
 
 ## Testing
-Done with a standard NUnit Test project (dotnet new nunit --name workshop.tests) with the additional package:
+Done with a standard NUnit Test project (`dotnet new nunit --name workshop.tests`) with the additional package:
 
 Install-Package Microsoft.Aspnecore.Mvc.Testing
